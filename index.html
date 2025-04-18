@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="./src/output.css" rel="stylesheet">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <title>Weather Forecast</title>
+</head>
+<body class="flex justify-center items-center h-screen bg">
+    <div class="backdrop-blur-xl bg-white/30 p-5 w-[400px] rounded-2xl text-white border border-white">
+        <div class="flex border border-white rounded-2xl">
+            <input class="data w-full h-[55px] text-2xl text-white font-medium uppercase p-2 placeholder:text-white focus:outline-none " type="text" placeholder="Enter the Location">
+            <button class='search bx bx-search text-3xl p-2 text-white focus:outline-none'></button>
+        </div>
+        <div class="detail hidden">
+            <div class="error">
+                <img class="p-5" src="./src/images/404.png" alt="">
+            </div>
+            <div class="ans">
+                <div class="text-center">
+                    <img class="weather-img px-10 pt-10" src="./src/images/cloud.png" alt="">
+                    <p class="temp text-6xl font-bold relative"></p>
+                    <p class="dis text-2xl font-medium capitalize"></p>
+                </div>
+                <div class="grid grid-cols-2 mt-7 ml-4">
+
+                    <div class="humidity flex items-center">
+                        <i class='bx bx-water text-6xl'></i>
+                        <div class="ml-3">
+                            <p class="humidity-info text-2xl font-medium"></p>
+                            <p class="text-[14px] font-medium">Humidity</p>
+                        </div>
+                    </div>
+                    <div class="wind flex items-center">
+                        <i class='bx bx-wind text-6xl'></i>
+                        <div class="ml-3">
+                            <p class="wind-info text-2xl font-medium"></p>
+                            <p class="text-[14px] font-medium">Wind Speed</p>
+                        </div>
+                    </div>
+                    <div class="humidity flex items-center">
+                        <i class='bx bx-cloud text-6xl'></i>
+                        <div class="ml-3">
+                            <p class="clouds-info text-2xl font-medium"></p>
+                            <p class="text-[14px] font-medium">Clouds</p>
+                        </div>
+                    </div>
+                    <div class="humidity flex items-center">
+                        <i class='bx bx-map text-6xl'></i>
+                        <div class="ml-3">
+                            <p class="location-info text-2xl font-medium pt-3"></p>
+                            <p class="text-[14px] font-medium">Location</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html>
